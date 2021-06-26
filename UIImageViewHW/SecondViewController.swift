@@ -9,16 +9,31 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    var image: UIImage!
-    var text = ""
-    @IBOutlet weak var imageViewOutlet: UIImageView!
+    private var firstImage: UIImage!
+    private var secondImage: UIImage!
+    private var thirdImage: UIImage!
+    
+    private var text = ""
+    
+    @IBOutlet weak var firstImageViewOutlet: UIImageView!
+    @IBOutlet weak var secondImageOutlet: UIImageView!
+    @IBOutlet weak var thirdImageOutlet: UIImageView!
+    
     @IBOutlet weak var labelOutlet: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageViewOutlet.image = image
+        navigationController?.navigationBar.tintColor = .white
+        
+        firstImageViewOutlet.image = firstImage
+        secondImageOutlet.image = secondImage
+        
+        if let image = thirdImage {
+            thirdImageOutlet.image = image
+        }
         labelOutlet.text = text
     }
-
+    
+    
 }
