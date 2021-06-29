@@ -246,93 +246,70 @@
                         <outlet property="appleWatchLabel" destination="2eP-dl-yav" id="PaL-CO-nOa"/>
                         <outlet property="macBookCaseImageView" destination="xrK-NQ-Vdc" id="RXp-IR-R9t"/>
                         <outlet property="macBookCaseLabel" destination="0T3-x4-adP" id="lgd-lb-2cP"/>
-                        <segue destination="7Ki-Ii-SrA" kind="show" identifier="caseSegue" id="hNS-7r-5wf"/>
-                        <segue destination="7Ki-Ii-SrA" kind="show" identifier="watchSegue" id="grJ-3k-Qyp"/>
-                        <segue destination="7Ki-Ii-SrA" kind="show" identifier="anotherCase" id="o9x-nf-oy9"/>
+                        <segue destination="zeM-Wa-HLp" kind="presentation" identifier="caseSegue" id="9Y8-u4-JUj"/>
+                        <segue destination="zeM-Wa-HLp" kind="presentation" identifier="watchSegue" id="G5m-S9-WvX"/>
+                        <segue destination="zeM-Wa-HLp" kind="presentation" identifier="anotherCase" id="w8Z-bb-8Cm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWb-fQ-tde" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="410.14492753623193" y="608.70535714285711"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="YPc-hd-vQK">
+        <!--Web View Controller-->
+        <scene sceneID="mhN-Un-ACK">
             <objects>
-                <viewController id="7Ki-Ii-SrA" customClass="SecondViewController" customModule="UIImageViewHW" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jXU-JO-QLA">
-                        <rect key="frame" x="0.0" y="0.0" width="1200" height="896"/>
+                <viewController id="zeM-Wa-HLp" customClass="WebViewController" customModule="UIImageViewHW" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B0G-SM-4fz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5X-aM-OE3">
-                                <rect key="frame" x="20" y="576" width="374" height="123"/>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tez-DS-suh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="Mdl-bg-zHK">
-                                <rect key="frame" x="20" y="140" width="1160" height="286"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JzX-VA-RU9">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="286"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="374" id="sMt-7X-l9g"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eHw-sO-53h">
-                                        <rect key="frame" x="382" y="0.0" width="374" height="286"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="374" id="gg5-1P-lQN"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gdT-b5-MBe">
-                                        <rect key="frame" x="764" y="0.0" width="374" height="286"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="374" id="eQi-jS-ifJ"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="JzX-VA-RU9" firstAttribute="leading" secondItem="Mdl-bg-zHK" secondAttribute="leading" id="7qf-Nm-ADk"/>
-                                    <constraint firstItem="eHw-sO-53h" firstAttribute="top" secondItem="Mdl-bg-zHK" secondAttribute="top" id="Bj9-NM-Vd9"/>
-                                    <constraint firstItem="eHw-sO-53h" firstAttribute="leading" secondItem="JzX-VA-RU9" secondAttribute="trailing" constant="8" id="ESZ-ii-IzL"/>
-                                    <constraint firstAttribute="bottom" secondItem="gdT-b5-MBe" secondAttribute="bottom" id="Fc5-fj-NOA"/>
-                                    <constraint firstItem="gdT-b5-MBe" firstAttribute="height" secondItem="Mdl-bg-zHK" secondAttribute="height" id="Grt-8D-IZd"/>
-                                    <constraint firstAttribute="bottom" secondItem="eHw-sO-53h" secondAttribute="bottom" id="HK1-z8-6HN"/>
-                                    <constraint firstItem="gdT-b5-MBe" firstAttribute="leading" secondItem="eHw-sO-53h" secondAttribute="trailing" constant="8" id="Nuh-zE-XO6"/>
-                                    <constraint firstItem="gdT-b5-MBe" firstAttribute="top" secondItem="Mdl-bg-zHK" secondAttribute="top" id="XeL-C7-fdm"/>
-                                    <constraint firstAttribute="bottom" secondItem="JzX-VA-RU9" secondAttribute="bottom" id="YhZ-RC-GKC"/>
-                                    <constraint firstAttribute="trailing" secondItem="gdT-b5-MBe" secondAttribute="trailing" constant="22" id="cDT-kZ-Pgl"/>
-                                    <constraint firstItem="JzX-VA-RU9" firstAttribute="height" secondItem="Mdl-bg-zHK" secondAttribute="height" id="eL6-SM-BqJ"/>
-                                    <constraint firstItem="gdT-b5-MBe" firstAttribute="leading" secondItem="eHw-sO-53h" secondAttribute="trailing" constant="8" id="q1x-Jb-4kN"/>
-                                    <constraint firstItem="eHw-sO-53h" firstAttribute="leading" secondItem="JzX-VA-RU9" secondAttribute="trailing" constant="8" id="qtx-fe-rEW"/>
-                                    <constraint firstItem="JzX-VA-RU9" firstAttribute="top" secondItem="Mdl-bg-zHK" secondAttribute="top" id="wsf-JD-ZO0"/>
-                                    <constraint firstItem="eHw-sO-53h" firstAttribute="height" secondItem="Mdl-bg-zHK" secondAttribute="height" id="xll-Bn-u0N"/>
-                                </constraints>
-                            </scrollView>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jUK-jy-nJV">
+                                <rect key="frame" x="0.0" y="764" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Item" image="chevron.backward" catalog="system" id="72H-GF-JYf">
+                                        <connections>
+                                            <action selector="goBackAction:" destination="zeM-Wa-HLp" id="KnG-J8-4sy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="jaR-a5-z2F"/>
+                                    <barButtonItem title="Item" image="chevron.forward" catalog="system" id="0uz-9Q-L2P">
+                                        <connections>
+                                            <action selector="goForwardAction:" destination="zeM-Wa-HLp" id="NZk-GC-LGR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2zD-Lh-W88"/>
+                                    <barButtonItem title="Item" image="arrow.clockwise" catalog="system" id="wdS-7z-3Aa">
+                                        <connections>
+                                            <action selector="refreshAction:" destination="zeM-Wa-HLp" id="3TE-3T-IoE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="tep-dy-A1K"/>
+                        <viewLayoutGuide key="safeArea" id="Wd6-CE-M1G"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Mdl-bg-zHK" firstAttribute="leading" secondItem="tep-dy-A1K" secondAttribute="leading" constant="20" id="SmL-Z0-IWX"/>
-                            <constraint firstItem="tep-dy-A1K" firstAttribute="bottom" secondItem="Mdl-bg-zHK" secondAttribute="bottom" constant="387" id="al5-tM-baJ"/>
-                            <constraint firstItem="tep-dy-A1K" firstAttribute="trailing" secondItem="Mdl-bg-zHK" secondAttribute="trailing" constant="20" id="wO1-iW-ap9"/>
-                            <constraint firstItem="Mdl-bg-zHK" firstAttribute="top" secondItem="tep-dy-A1K" secondAttribute="top" id="wPg-ya-OOB"/>
-                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ZnO-To-qzG"/>
-                    <navigationItem key="navigationItem" id="Wof-1s-Pzl"/>
-                    <size key="freeformSize" width="1200" height="896"/>
+                    <navigationItem key="navigationItem" id="6KQ-1g-P6x"/>
                     <connections>
-                        <outlet property="firstImageViewOutlet" destination="JzX-VA-RU9" id="Vsa-IZ-W9y"/>
-                        <outlet property="labelOutlet" destination="f5X-aM-OE3" id="Rah-b4-0Lz"/>
-                        <outlet property="secondImageOutlet" destination="eHw-sO-53h" id="MCA-lJ-OUx"/>
-                        <outlet property="thirdImageOutlet" destination="gdT-b5-MBe" id="pqM-a4-XEH"/>
+                        <outlet property="goBackItem" destination="72H-GF-JYf" id="M6B-TN-QWo"/>
+                        <outlet property="goForwardItem" destination="0uz-9Q-L2P" id="Pfj-lu-71B"/>
+                        <outlet property="refreshItem" destination="wdS-7z-3Aa" id="RU5-If-haS"/>
+                        <outlet property="webView" destination="tez-DS-suh" id="fAl-6E-dej"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KBH-Ks-kzO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Udx-PE-BkC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="408.69565217391306" y="1444.4196428571429"/>
+            <point key="canvasLocation" x="408.69565217391306" y="1407.5892857142856"/>
         </scene>
         <!--Корзина-->
         <scene sceneID="ieO-kY-Yzk">
@@ -417,13 +394,16 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="o9x-nf-oy9"/>
+        <segue reference="w8Z-bb-8Cm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="571" height="437"/>
         <image name="5" width="461" height="538"/>
         <image name="6" width="548" height="455"/>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="bag" catalog="system" width="128" height="128"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="laptopcomputer.and.iphone" catalog="system" width="128" height="74"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>

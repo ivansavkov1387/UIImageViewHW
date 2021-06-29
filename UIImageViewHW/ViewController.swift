@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     private func addGestureRecognizers() {
         let tapGestureRecognizerForCase = UITapGestureRecognizer(target: self, action: #selector(caseImageTouch))
         let tapGestureRecognizerForWatch = UITapGestureRecognizer(target: self, action: #selector(watchImageTouch))
-        let tapGestureRecognizerForAnotherCase = UITapGestureRecognizer(target: self, action: #selector(anotherCaseImageTouch(tapGestureRecognizer:)))
+        let tapGestureRecognizerForAnotherCase = UITapGestureRecognizer(target: self, action: #selector(anotherCaseImageTouch))
         
         macBookCaseImageView.addGestureRecognizer(tapGestureRecognizerForCase)
         appleWatchImageView.addGestureRecognizer(tapGestureRecognizerForWatch)
@@ -43,42 +43,21 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "caseSegue" {
-            guard let destination = segue.destination as? SecondViewController else { return }
-            destination.firstImage = macBookCaseImageView.image
-            addOtherImages(destination: destination)
-            destination.text = macBookCaseLabel.text!
+            guard let destination = segue.destination as? WebViewController else { return }
+            destination.url = "https://www.apple.com/shop/product/MRQM2ZM/A/leather-sleeve-for-13-inch-macbook-pro-saddle-brown?fnode=61b2ea2b9c2517ccf328a478cdd5391e75cafb5dd963cf7e254cd6a5fe1db50efbe9408cbf4221790da583509fda71f6a9d94a09fb331d4bb892be8bae14a6a5040178fef470844ecc7f5b5c37f350c5481a205be3b6736ca94d75efcc21b5b6"
         } else if segue.identifier == "watchSegue" {
-            guard let destination = segue.destination as? SecondViewController else { return }
-            destination.firstImage = appleWatchImageView.image
-            addOtherImages(destination: destination)
-            destination.text = appleWatchLabel.text!
+            guard let destination = segue.destination as? WebViewController else { return }
+            destination.url = "https://www.apple.com/shop/buy-watch/apple-watch?preSelect=false&product=MJ6N3LL/A&step=detail#"
         } else {
-            guard let destination = segue.destination as? SecondViewController else { return }
-            destination.firstImage = anotherMacBookCaseImageView.image
-            addOtherImages(destination: destination)
-            destination.text = anotherMacBookCaseLabel.text!
+            guard let destination = segue.destination as? WebViewController else { return }
+            destination.url = "https://www.apple.com/shop/product/HPCZ2ZM/A/incase-compact-sleeve-in-flight-nylon-for-16-macbook-pro-and-15-macbook-pro?fnode=baa7ba65a57372f201c5d3e601f44d6534ad87a7289426b08cc8a103995f8e172d36ce794ef467114b4f51b51676c1836c919f7c85b532a74b8d83be6969244bf18d1ee72e4e317a02f302cfbff3cff152e02910c71bb225ba017ec1a0956d3f3817933b15d23bac4b8b907b2a6159bd"
+
         }
     }
-    
-    private  func addOtherImages(destination: SecondViewController) {
-        switch destination.firstImage {
-        case macBookCaseImageView.image:
-            destination.secondImage = UIImage(named: "2")
-        case appleWatchImageView.image:
-            destination.secondImage = UIImage(named: "3")
-            destination.thirdImage = UIImage(named: "4")
-        case anotherMacBookCaseImageView.image:
-            destination.secondImage = UIImage(named: "7")
-            destination.thirdImage = UIImage(named: "8")
-        default:
-            break
-        }
-    }
-    
-    
-    
+
     @objc private func caseImageTouch(tapGestureRecognizer: UITapGestureRecognizer) {
         performSegue(withIdentifier: "caseSegue", sender: nil)
+        
     }
     
     @objc private func watchImageTouch(tapGestureRecognizer: UITapGestureRecognizer) {
