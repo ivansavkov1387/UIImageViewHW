@@ -246,9 +246,9 @@
                         <outlet property="appleWatchLabel" destination="2eP-dl-yav" id="PaL-CO-nOa"/>
                         <outlet property="macBookCaseImageView" destination="xrK-NQ-Vdc" id="RXp-IR-R9t"/>
                         <outlet property="macBookCaseLabel" destination="0T3-x4-adP" id="lgd-lb-2cP"/>
-                        <segue destination="zeM-Wa-HLp" kind="presentation" identifier="caseSegue" id="9Y8-u4-JUj"/>
-                        <segue destination="zeM-Wa-HLp" kind="presentation" identifier="watchSegue" id="G5m-S9-WvX"/>
-                        <segue destination="zeM-Wa-HLp" kind="presentation" identifier="anotherCase" id="w8Z-bb-8Cm"/>
+                        <segue destination="zeM-Wa-HLp" kind="show" identifier="caseSegue" id="9Y8-u4-JUj"/>
+                        <segue destination="zeM-Wa-HLp" kind="show" identifier="watchSegue" id="G5m-S9-WvX"/>
+                        <segue destination="zeM-Wa-HLp" kind="show" identifier="anotherCase" id="w8Z-bb-8Cm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWb-fQ-tde" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -260,20 +260,24 @@
             <objects>
                 <viewController id="zeM-Wa-HLp" customClass="WebViewController" customModule="UIImageViewHW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B0G-SM-4fz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tez-DS-suh">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="681"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ELP-id-Slg">
+                                <rect key="frame" x="197" y="411" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jUK-jy-nJV">
-                                <rect key="frame" x="0.0" y="764" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="769" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Item" image="chevron.backward" catalog="system" id="72H-GF-JYf">
@@ -299,8 +303,15 @@
                         <viewLayoutGuide key="safeArea" id="Wd6-CE-M1G"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6KQ-1g-P6x"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="6KQ-1g-P6x">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="lPS-vw-Igs">
+                            <connections>
+                                <action selector="shareAction:" destination="zeM-Wa-HLp" id="WB0-LR-cG2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="ELP-id-Slg" id="8oN-xA-p4Q"/>
                         <outlet property="goBackItem" destination="72H-GF-JYf" id="M6B-TN-QWo"/>
                         <outlet property="goForwardItem" destination="0uz-9Q-L2P" id="Pfj-lu-71B"/>
                         <outlet property="refreshItem" destination="wdS-7z-3Aa" id="RU5-If-haS"/>
@@ -394,7 +405,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="w8Z-bb-8Cm"/>
+        <segue reference="9Y8-u4-JUj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="571" height="437"/>
@@ -407,6 +418,10 @@
         <image name="laptopcomputer.and.iphone" catalog="system" width="128" height="74"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
