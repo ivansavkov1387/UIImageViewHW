@@ -51,10 +51,10 @@ class ViewController: UIViewController {
         } else {
             guard let destination = segue.destination as? WebViewController else { return }
             destination.url = "https://www.apple.com/shop/product/HPCZ2ZM/A/incase-compact-sleeve-in-flight-nylon-for-16-macbook-pro-and-15-macbook-pro?fnode=baa7ba65a57372f201c5d3e601f44d6534ad87a7289426b08cc8a103995f8e172d36ce794ef467114b4f51b51676c1836c919f7c85b532a74b8d83be6969244bf18d1ee72e4e317a02f302cfbff3cff152e02910c71bb225ba017ec1a0956d3f3817933b15d23bac4b8b907b2a6159bd"
-
+            
         }
     }
-
+    
     @objc private func caseImageTouch(tapGestureRecognizer: UITapGestureRecognizer) {
         performSegue(withIdentifier: "caseSegue", sender: nil)
         

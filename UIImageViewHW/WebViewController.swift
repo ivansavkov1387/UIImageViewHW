@@ -23,7 +23,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         navigationController?.navigationBar.barTintColor = .black
         webView.navigationDelegate = self
         request(for: url)
-    
+        
     }
     
     private func request(for url: String) {
@@ -81,9 +81,9 @@ extension WebViewController {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         isWorkIndicator(indicator: activityIndicator, isAnimated: false)
         if webView.canGoBack {
-        goBackItem.isEnabled = true
+            goBackItem.isEnabled = true
         } else if webView.canGoForward {
-        goForwardItem.isEnabled = true
+            goForwardItem.isEnabled = true
         }
         
         
