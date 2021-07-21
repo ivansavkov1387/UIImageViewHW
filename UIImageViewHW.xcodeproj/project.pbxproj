@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B41AE2F4268BC06A00112F50 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AE2F3268BC06A00112F50 /* WebViewController.swift */; };
+		B4E49F0026A04E970063005C /* PregnancyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E49EFF26A04E970063005C /* PregnancyViewController.swift */; };
+		B4E49F0326A054AD0063005C /* PageVCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E49F0226A054AD0063005C /* PageVCHelper.swift */; };
+		B4E49F0626A057A10063005C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E49F0526A057A10063005C /* PageViewController.swift */; };
 		B4F59E6B2681F23100260CB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F59E6A2681F23100260CB9 /* AppDelegate.swift */; };
 		B4F59E6D2681F23100260CB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F59E6C2681F23100260CB9 /* SceneDelegate.swift */; };
 		B4F59E6F2681F23100260CB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F59E6E2681F23100260CB9 /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		B41AE2F3268BC06A00112F50 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B4E49EFF26A04E970063005C /* PregnancyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregnancyViewController.swift; sourceTree = "<group>"; };
+		B4E49F0226A054AD0063005C /* PageVCHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVCHelper.swift; sourceTree = "<group>"; };
+		B4E49F0526A057A10063005C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		B4F59E672681F23100260CB9 /* UIImageViewHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIImageViewHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F59E6A2681F23100260CB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4F59E6C2681F23100260CB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +67,9 @@
 				B4F59E6A2681F23100260CB9 /* AppDelegate.swift */,
 				B4F59E6C2681F23100260CB9 /* SceneDelegate.swift */,
 				B4F59E6E2681F23100260CB9 /* ViewController.swift */,
+				B4E49EFF26A04E970063005C /* PregnancyViewController.swift */,
+				B4E49F0526A057A10063005C /* PageViewController.swift */,
+				B4E49F0226A054AD0063005C /* PageVCHelper.swift */,
 				B41AE2F3268BC06A00112F50 /* WebViewController.swift */,
 				B4F59E702681F23100260CB9 /* Main.storyboard */,
 				B4F59E732681F23400260CB9 /* Assets.xcassets */,
@@ -142,8 +151,11 @@
 			files = (
 				B4F59E6F2681F23100260CB9 /* ViewController.swift in Sources */,
 				B4F59E6B2681F23100260CB9 /* AppDelegate.swift in Sources */,
+				B4E49F0026A04E970063005C /* PregnancyViewController.swift in Sources */,
+				B4E49F0326A054AD0063005C /* PageVCHelper.swift in Sources */,
 				B4F59E6D2681F23100260CB9 /* SceneDelegate.swift in Sources */,
 				B41AE2F4268BC06A00112F50 /* WebViewController.swift in Sources */,
+				B4E49F0626A057A10063005C /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
